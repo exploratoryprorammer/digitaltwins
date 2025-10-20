@@ -46,6 +46,7 @@ for table_name, query_string in queries.items():
     except Exception as e:
         print(f"Error querying table {table_name}: {e}")
 
+# State vector creation functions (unchanged from your script)
 def create_state_vector_all_features(df_dict):
     state_vectors = {}
     for stay_id in get_all_stay_ids(df_dict):
@@ -127,6 +128,7 @@ if not patient_states_all_df.empty:
 else:
     print("No patient state vectors could be created.")
 
+# Pinecone setup and indexing
 pc = Pinecone(api_key="08180080-18aa-4999-b131-612b5b9b41aa")
 index_name = "ucsfresearch"
 

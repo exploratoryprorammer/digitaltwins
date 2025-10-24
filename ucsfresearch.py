@@ -32,7 +32,7 @@ queries = {
     'norepinephrine_equivalent_dose': "SELECT * FROM `physionet-data.mimiciv_3_1_derived.norepinephrine_equivalent_dose` LIMIT 20",
     'nsaid': "SELECT * FROM `physionet-data.mimiciv_3_1_derived.nsaid` LIMIT 20",
     'oasis': "SELECT * FROM `physionet-data.mimiciv_3_1_derived.oasis` LIMIT 20",
-    'oxygen_delivery': "SELECT * FROM `physionet-data.mimiciv_3_1_derived.oxygen_delivery` LIMIT 20"
+    'oxygen_delivery': "SELEC T * FROM `physionet-data.mimiciv_3_1_derived.oxygen_delivery` LIMIT 20"
 }
 
 dataframes = {}

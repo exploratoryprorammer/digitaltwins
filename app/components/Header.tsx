@@ -38,13 +38,24 @@ const Header: React.FC = () => {
       </Toolbar>
       <Toolbar sx={{ backgroundColor: "#F5F5F5", color: "#001E62" }}>
         <Box sx={{ display: "flex", gap: 2, flexGrow: 1 }}>
-          {["Find Twins", "About", "Lab Members"].map((item) => (
+          {[
+            { label: "Find Twins", hash: "find-twins" },
+            { label: "About", hash: "about" },
+            { label: "Lab Members", hash: "lab-members" },
+          ].map((item) => (
             <Button
-              key={item}
+              key={item.label}
               color="inherit"
-              href={`#${item.toLowerCase().replace(" & ", "-")}`}
+              href={`#${item.hash}`}
+              sx={{
+                textTransform: "none",
+                fontWeight: "medium",
+                "&:hover": {
+                  backgroundColor: "rgba(0, 30, 98, 0.1)",
+                },
+              }}
             >
-              {item}
+              {item.label}
             </Button>
           ))}
         </Box>
